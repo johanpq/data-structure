@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h> //contem o NULL, malloc, calloc, free
+
+int main(){
+	
+	//alocao de um vetor estático
+	
+	int vs[5] = {0, 10, 20, 30, 40};
+	
+	puts("### VETOR ESTÁTICO");
+	puts("\n");
+	
+	printf("&vs = %p, vs = %p, *vs = %i\n", &vs, vs, *vs);
+	
+	for (int i = 0; i < 5; i++) {
+		printf("&vs[%i] = %p, vs[%i] = %i\n", i, &vs[i], i, vs[i]);
+	}
+	puts("\n");
+	
+	//alocacao de um vetor dinâmico usando malloc
+	
+	puts("### VETOR DINAMICO COM MALLOC");
+	
+	int *vh = (int*)malloc(5 * sizeof(int)); //todos os elementos possuem lixos de memórias
+	
+	printf("&vh = %p, vh = %p, *vh = %i\n", &vh, vh, *vh);
+	
+	for (int i = 0; i < 5; i++) {
+		printf("&vh[%i] = %p, vh[%i] = %i\n", i, &vh[i], i, vh[i]);
+	}
+	puts("\n");
+	
+	puts("### VETOR DINAMICO COM CALLOC");
+	
+	//alocacao de um vetor dinâmico usando calloc (memória Heap)
+	//todo o bloco alocado possui bits 0
+	//garante que todos os elementos alocado (do vetor) terão valor 0
+	//todos possuem "lixo de memória"
+	
+	int *vhc = (int*)calloc(5, sizeof(int)); 
+	
+	printf("&vhc = %p, vhc = %p, *vhc = %i\n", &vhc, vhc, *vhc);
+	
+	for (int i = 0; i < 5; i++) {
+		printf("&vhc[%i] = %p, vhc[%i] = %i\n", i, &vhc[i], i, vhc[i]);
+	}
+	puts("\n");
+	
+	return 0;
+}

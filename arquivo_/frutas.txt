@@ -1,0 +1,6 @@
+Nome da fruta 1: apple, Preco: R$ 12.1 
+Nome da fruta 2: melancia, Preco: R$ 34.4 
+Nome da fruta 3: banana, Preco: R$ 34.3 
+Nome da fruta 4: limao, Preco: R$ 32.2 
+Nome da fruta 5: abacate, Preco: R$ 23.0 
+Nome da fruta 6: abacate, Preco: R$ 32.0 
