@@ -25,3 +25,32 @@ void pilha_push(Pilha *p, float v) { // v é o elemento que eu quero inserir na 
     p->vet[p->n] = v; //insere elemento na próxima posição livre
     p->n++; //atualiza a quantidade da pilha
 }
+
+int pilha_vazia(Pilha *p) {
+    return (p->n == 0); //checa se a pilha está vazia (usa como condição)
+}
+
+float pilha_pop(Pilha *p) {
+    float v; 
+
+    if(pilha_vazia(p)) {
+        printf("Pilha vazia. \n");
+        exit(1);
+    }
+
+    v = p->vet[p->n-1]; //retira elemento do topo
+    p->n--; // e atualiza a lista
+    return v;
+}
+
+void pilha_libera(Pilha *p) {
+    free(p);
+}
+
+void pilha_imprimir(Pilha *p) {
+    int contador;
+
+    for(contador = p->n-1; contador >= 0; contador--) { //do topo pra base
+        printf("%.f\n", p->vet[contador]);
+    }
+}
