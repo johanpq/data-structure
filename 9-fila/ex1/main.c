@@ -4,18 +4,20 @@ int main() {
 
     Fila *Q = CriaFila(50);
 
-    DestruirFila(&Q);
+    InsereFila(Q, 10);
+
+    ImprimirFila(Q);
+
+    int elem;
+    ConsultaFila(Q, &elem);
 
     int vazia = FilaVazia(Q);
 
     int cheia = FilaCheia(Q);
 
-    InsereFila(Q, 10);
-
     RemoveFila(Q);
 
-    int elem;
-    ConsultaFila(Q, &elem);
+    DestruirFila(&Q);
 
 
     return 0;

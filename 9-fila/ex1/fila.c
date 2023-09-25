@@ -70,3 +70,9 @@ int ConsultaFila(Fila *Q, int *elem) {
         return 1; //sucesso ao consultar fila
     }
 }
+
+void ImprimirFila(Fila *Q) {
+    for(int i = 0; i < Q->qtde; i++) {
+        printf("%i\n", Q->val[i]);
+    }
+}

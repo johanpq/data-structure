@@ -17,3 +17,5 @@ int InsereFila(Fila *Q, int elem);
 int RemoveFila(Fila *Q);
 
 int ConsultaFila(Fila *Q, int *elem);
+
+void ImprimirFila(Fila *Q);
