@@ -1,1 +1,1 @@
-# Data-structure I, a subject I'm taking at university 
+# Data-structure I, a subject I'm took at university 
